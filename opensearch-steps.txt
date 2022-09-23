@@ -1,0 +1,9 @@
+Open Search is setup in VPCin DMZ subnet using Terraform.
+
+An EC2 instance is spin up using Terraform code.
+
+EC2 instance has a user-data file which installs awscli, logstash and filebeat. It also adds the required config files.
+
+A sample logfile, stored in S3 bucket is pulled using awscli command on to the EC2 instance.
+
+Filebeat is configured to read the logs from downloaded file and send the data to Opensearch instance.
